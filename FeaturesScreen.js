@@ -44,10 +44,10 @@ const FeaturesScreen = ({ onSelectFeature, userProfile }) => {
         },
         {
             id: 'rephrase',
-            title: 'Text Rephrasing & Correction',
+            title: 'Text Paraphrasing & Correction',
             description: 'Grammar correction and paraphrasing with Generative AI',
             icon: 'create',
-            isActive: false
+            isActive: true
         },
         {
             id: 'ielts',
