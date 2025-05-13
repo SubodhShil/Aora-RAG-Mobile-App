@@ -1,3 +1,5 @@
+// all necessary imports and styles
+
 import React, { useState } from 'react';
 import {
     View,
@@ -12,6 +14,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 
 const TextParaphraserScreen = () => {
+    // declared states
     const [inputText, setInputText] = useState('');
     const [outputText, setOutputText] = useState('');
     const [selectedStyle, setSelectedStyle] = useState('Fluency');
@@ -30,6 +33,8 @@ const TextParaphraserScreen = () => {
     ];
 
     const handleParaphrase = async () => {
+
+        // if user input is empty than don't call the api
         if (!inputText.trim()) {
             Alert.alert('Error', 'Please enter some text to paraphrase');
             return;
@@ -37,7 +42,8 @@ const TextParaphraserScreen = () => {
 
         setIsLoading(true);
         setOutputText('');
-
+        
+        // sending user input text to the backend api
         try {
             const response = await fetch('https://langchain-grammar-check-api.onrender.com/paraphraser/gemini/paraphrase', {
                 method: 'POST',
@@ -49,6 +55,7 @@ const TextParaphraserScreen = () => {
                     style: selectedStyle
                 }),
             });
+            
 
             if (!response.ok) {
                 throw new Error(`API request failed with status ${response.status}`);
@@ -79,6 +86,7 @@ const TextParaphraserScreen = () => {
     return (
         <View style={componentStyles.container}>
             <ScrollView style={componentStyles.scrollView}>
+                
                 {/* Input Section */}
                 <View style={componentStyles.section}>
                     <Text style={componentStyles.sectionTitle}>Original Text</Text>

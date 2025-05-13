@@ -13,6 +13,7 @@ const SplashScreen = () => {
             <StatusBar barStyle="light-content" backgroundColor="#4a90e2" />
             <Text style={styles.splashLogo}>Aora</Text>
             <ActivityIndicator size="large" color="#ffffff" style={styles.loader} />
+            {/* slogan here */}
             <Text style={styles.splashTagline}>Transform your photos with AI</Text>
         </View>
     );
