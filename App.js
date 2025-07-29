@@ -12,6 +12,7 @@ import AppHeader from "./components/AppHeader";
 import OCRFeature from "./components/OCRFeature";
 import FeaturePlaceholder from "./components/FeaturePlaceholder";
 import TextParaphraserScreen from "./components/TextParaphraserScreen";
+import YouTubeSummarizerScreen from "./components/YouTubeSummarizerScreen";
 
 
 export default function App() {
@@ -188,6 +189,8 @@ export default function App() {
         />
       ) : currentFeature === "rephrase" ? (
         <TextParaphraserScreen />
+      ) : currentFeature === "youtube" ? (
+        <YouTubeSummarizerScreen />
       ) : (
         <FeaturePlaceholder featureId={currentFeature} />
       )}
