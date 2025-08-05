@@ -34,6 +34,7 @@ const FeatureCard = ({ title, description, icon, onPress, isActive }) => (
 );
 
 const FeaturesScreen = ({ onSelectFeature, userProfile }) => {
+
     // All app features are listed below
     const features = [
         {
@@ -51,10 +52,10 @@ const FeaturesScreen = ({ onSelectFeature, userProfile }) => {
             isActive: true
         },
         {
-            id: 'ielts',
-            title: 'IELTS Assistance',
-            description: 'Writing & Speaking help with score prediction',
-            icon: 'school',
+            id: 'grammar',
+            title: 'Grammar Checker',
+            description: 'Check grammar based on user input',
+            icon: 'checkmark-done-outline',
             isActive: true
         },
         {

@@ -31,7 +31,6 @@ const TextParaphraserScreen = () => {
         { id: 'Creative', name: 'Creative', description: 'Use vivid language, metaphors, and unique expressions.' },
         { id: 'Shorten', name: 'Shorten', description: 'Condense the text while preserving the key information.' }
     ];
-
     const handleParaphrase = async () => {
 
         // if user input is empty than don't call the api
